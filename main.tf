@@ -17,3 +17,17 @@ module "DEVOPS_ACR" {
   LOCATION   = module.DEVOPS_RG.LOCATION
   RG_NAME    = module.DEVOPS_RG.NAME
 }
+
+module "AZURE_IDENTITY" {
+  source = "./Data/CurrentClient"
+}
+
+module "DEVOPS_KV" {
+  source       = "./KeyVault"
+  depends_on   = [module.DEVOPS_ACR, module.AZURE_IDENTITY]
+  NAME         = var.DEVOPS_KV_NAME
+  LOCATION     = module.DEVOPS_RG.LOCATION
+  RG_NAME      = module.DEVOPS_RG.NAME
+  SP_OBJECT_ID = module.AZURE_IDENTITY.object_id
+  TENANT_ID    = module.AZURE_IDENTITY.tenant_id
+}

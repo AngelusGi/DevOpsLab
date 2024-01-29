@@ -38,7 +38,11 @@ variable "DEVOPS_VNET_RG_NAME" {
 
 variable "DEVOPS_ACR_NAME" {
   nullable    = false
-  description = "name of the rosource group in wich is contained the VNet"
+  type        = string
+}
+
+variable "DEVOPS_KV_NAME" {
+  nullable    = false
   type        = string
 }
 
