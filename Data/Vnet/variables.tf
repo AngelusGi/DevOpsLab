@@ -1,10 +1,10 @@
-variable "VNET_NAME" {
+variable "NAME" {
   type        = string
   description = "name of VNet in wich create DevOps resources"
   nullable    = false
 }
 
-variable "VNET_RG_NAME" {
+variable "RG_NAME" {
   type        = string
   description = "name of the rosource group in wich is contained the VNet"
   nullable    = false

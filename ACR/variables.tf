@@ -9,13 +9,13 @@ variable "RG_NAME" {
   nullable    = false
 }
 
-variable "ACR_NAME" {
+variable "NAME" {
   type        = string
   description = "name of ACR"
   nullable    = false
 }
 
-variable "ACR_SKU" {
+variable "SKU" {
   type     = string
   default  = "Basic"
   nullable = false
