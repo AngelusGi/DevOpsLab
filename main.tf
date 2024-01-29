@@ -14,6 +14,6 @@ module "DEVOPS_ACR" {
   source     = "./ACR"
   depends_on = [module.DEVOPS_RG, module.DEVOPS_VNET]
   ACR_NAME   = var.DEVOPS_ACR_NAME
-  LOCATION   = DEVOPS_RG.LOCATION
-  RG_NAME    = DEVOPS_RG.NAME
+  LOCATION   = module.DEVOPS_RG.LOCATION
+  RG_NAME    = module.DEVOPS_RG.NAME
 }
