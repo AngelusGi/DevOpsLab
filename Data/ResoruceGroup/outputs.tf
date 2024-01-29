@@ -1,11 +1,11 @@
-output "DEVOPS_RG_LOCATION" {
+output "LOCATION" {
   value = data.azurerm_resource_group.devops.location
 }
 
-output "DEVOPS_RG_NAME" {
+output "NAME" {
   value = data.azurerm_resource_group.devops.name
 }
 
-output "DEVOPS_RG_ID" {
+output "ID" {
   value = data.azurerm_resource_group.devops.id
 }

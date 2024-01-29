@@ -36,6 +36,12 @@ variable "DEVOPS_VNET_RG_NAME" {
   type        = string
 }
 
+variable "DEVOPS_ACR_NAME" {
+  nullable    = false
+  description = "name of the rosource group in wich is contained the VNet"
+  type        = string
+}
+
 # locals {
 #   TFSTATE_FILE_NAME = contains(var.TF_STATE_FILE_NAME, ".tfstate") ? var.TF_STATE_FILE_NAME : "${var.TF_STATE_FILE_NAME}.tfstate"
 # }

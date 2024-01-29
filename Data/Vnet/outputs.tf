@@ -1,7 +1,7 @@
-output "virtual_network_id" {
+output "ID" {
   value = data.azurerm_virtual_network.devops.id
 }
 
-output "virtual_network_name" {
+output "NAME" {
   value = data.azurerm_virtual_network.devops.name
 }
