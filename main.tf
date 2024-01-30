@@ -42,7 +42,3 @@ module "DEVOPS_AKS" {
   SP_CLIENT_SECRET = var.SP_CLIENT_SECRET
   VNET_NAME        = module.DEVOPS_VNET.NAME
 }
-
-output "aks_login_server" {
-  value = module.DEVOPS_AKS.aks_login_server
-}
