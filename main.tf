@@ -31,3 +31,18 @@ module "DEVOPS_KV" {
   SP_OBJECT_ID = module.AZURE_IDENTITY.object_id
   TENANT_ID    = module.AZURE_IDENTITY.tenant_id
 }
+
+module "DEVOPS_AKS" {
+  source           = "./AKS"
+  depends_on       = [module.DEVOPS_ACR, module.AZURE_IDENTITY]
+  NAME             = var.DEVOPS_AKS_NAME
+  LOCATION         = module.DEVOPS_RG.LOCATION
+  RG_NAME          = module.DEVOPS_RG.NAME
+  SP_CLIENT_ID     = module.AZURE_IDENTITY.client_id
+  SP_CLIENT_SECRET = var.SP_CLIENT_SECRET
+  VNET_NAME        = module.DEVOPS_VNET.NAME
+}
+
+output "aks_login_server" {
+  value = module.DEVOPS_AKS.aks_login_server
+}

@@ -46,6 +46,11 @@ variable "DEVOPS_KV_NAME" {
   type        = string
 }
 
+variable "DEVOPS_AKS_NAME" {
+  nullable    = false
+  type        = string
+}
+
 # locals {
 #   TFSTATE_FILE_NAME = contains(var.TF_STATE_FILE_NAME, ".tfstate") ? var.TF_STATE_FILE_NAME : "${var.TF_STATE_FILE_NAME}.tfstate"
 # }

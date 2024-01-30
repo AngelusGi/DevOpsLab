@@ -11,7 +11,7 @@ variable "RG_NAME" {
 
 variable "NAME" {
   type        = string
-  description = "name of ACR"
+  description = "name of AKS instance"
   nullable    = false
 }
 
@@ -71,5 +71,10 @@ variable "SP_CLIENT_SECRET" {
 
 variable "SUBNET_CIDR" {
   default = ["10.0.0.128/27"]
+  sensitive = false
+}
+
+variable "SUBNET_NAME" {
+  default = "aks-subnet"
   sensitive = false
 }

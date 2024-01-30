@@ -11,9 +11,9 @@ resource "azurerm_kubernetes_cluster" "devops" {
     os_disk_size_gb     = var.NODE_DISK_SIZE
     max_count           = var.NODE_COUNT_MAX
     min_count           = var.NODE_COUNT_MIN
-    node_count          = var.NODE_COUNT
+    # node_count          = var.NODE_COUNT
     enable_auto_scaling = true
-    os_disk_type        = "managed"
+    os_disk_type        = "Managed"
   }
 
   service_principal {
@@ -26,7 +26,7 @@ resource "azurerm_kubernetes_cluster" "devops" {
 }
 
 resource "azurerm_subnet" "aks" {
-  name                 = "aks-subnet"
+  name                 = var.SUBNET_NAME
   resource_group_name  = var.RG_NAME
   virtual_network_name = var.VNET_NAME
   address_prefixes     = var.SUBNET_CIDR
