@@ -15,6 +15,7 @@ crash.*.log
 # to change depending on the environment.
 *.local.tfvars
 *.local.tfvars.json
+*.local.ps1
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
