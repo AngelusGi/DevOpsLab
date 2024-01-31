@@ -4,7 +4,7 @@ output "login_server" {
 }
 
 output "kubeconfig" {
-  value     = data.azurerm_kubernetes_cluster.devops.kube_admin_config
+  value     = data.azurerm_kubernetes_cluster.devops.kube_config
   sensitive = true
 }
 
