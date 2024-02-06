@@ -1,11 +1,12 @@
 # Use the official Python image as the base image
-FROM python:3.10.13
+FROM python:3.13.0a3-slim
 
 # Set the working directory
 WORKDIR /app
 
-# Upgrade pip on base image
-RUN pip install --upgrade pip
+# Upgrade debian packages on base image
+RUN apt update
+RUN apt -y upgrade
 
 # Copy the requirements file and install the dependencies
 COPY requirements.txt .
