@@ -13,7 +13,7 @@ execute ``set-pwsh-auth-terraform.ps1`` powershell script to set all env variabl
 
 #### Build
 
-```podman build --tag angelusgi/apidemo:0.0.3 --file .\app\2_myApi\Dockerfile```
+```podman build --tag angelusgi/apidemo:0.0.3 --file py_app/2_myApi/Dockerfile```
 
 #### Push to Docker Hub
 ```podman login <docker-registry-name> --username <your-user-name> --password <your-user-name>```
@@ -29,7 +29,7 @@ execute ``set-pwsh-auth-terraform.ps1`` powershell script to set all env variabl
 
 #### Build
 
-```podman build --tag angelusgi/locust_test:0.0.4 --file .\app\3_perfTest\Dockerfile```
+```podman build --tag angelusgi/locust_test:0.0.4 --file py_app/3_perfTest/Dockerfile```
 
 #### Push to Docker Hub
 ```podman login <docker-registry-name> --username <your-user-name> --password <your-user-name>```
