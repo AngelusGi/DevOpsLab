@@ -1,4 +1,4 @@
-# modules/simple_api.py
+# app.py
 from flask import Flask, request, abort, jsonify
 from random import randrange
 from datetime import datetime, timezone
