@@ -12,7 +12,7 @@ port = int(os.environ.get('PORT', 8080))
 
 @app.route("/")
 def home():
-    return "Hello, this is a Flask Microservice"
+    return render_template('index.html')
 
 @app.route(rule='/getRandom', methods=['GET'])
 def get_random():
